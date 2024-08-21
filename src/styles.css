@@ -1,0 +1,183 @@
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.google-container{
+    text-align: center;
+}
+
+.google-logo img {
+    width: 272px;
+    height: 92px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-bar input {
+    width: 500px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #dfe1e5;
+    padding: 0 50px 0 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: relative;
+    margin-left: -60px;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.search-icon,
+.mic-icon {
+    background: url('https://www.google.com/images/branding/product/ico/googlemic_color_24dp.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.search-icon {
+    background-position: 0 0;
+}
+
+.mic-icon {
+    background-position: -24px 0;
+}
+
+.buttons{
+    margin-top: 20px;
+}
+
+.buttons button{
+    background-color: white;
+    border: 1px solid #dfe1e5;
+    border-radius: 5px;
+    color: #5f6363;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.buttons button:hover{
+    background-color: #e8e8e8;
+    border: 1px solid #dfe1e5;
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .google-logo img {
+
+        width: 200px;
+
+        height: 68px;
+
+    }
+
+
+
+    .search-bar input {
+
+        width: 300px;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .google-logo img {
+
+        width: 150px;
+
+        height: 51px;
+
+    }
+
+
+
+    .search-bar input {
+
+        width: 200px;
+
+        padding: 0 40px 0 15px;
+
+    }
+
+
+
+    .search-icons {
+
+        margin-left: -50px;
+
+        width: 50px;
+
+    }
+
+
+
+    .buttons button {
+
+        padding: 8px 15px;
+
+    }
+
+}
+
+
+
+
+@keyframes bounce {
+
+    0%, 20%, 50%, 80%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    40% {
+
+        transform: translateY(-10px);
+
+    }
+
+    60% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+
+
+.search-icon:hover,
+
+.mic-icon:hover {
+
+    animation: bounce 1s;
+
+}
+
