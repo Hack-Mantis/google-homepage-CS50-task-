@@ -14,11 +14,11 @@ body {
 .Bar-menu{
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 5px;
 }
 
 .Bar-menu a,i {
-    margin-right: 10px; /* Adjust the value as needed to increase or decrease the spacing */
+    margin-right: 20px; /* Adjust the value as needed to increase or decrease the spacing */
 }
 
 .google-container {
@@ -36,36 +36,33 @@ body {
 
 
 .search-bar {
-    width: max-content;
-    display: center;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-
-
-.search-bar input {
-    width: 500px;
-    height: 40px;
+    justify-content: space-evenly;
+    width: 450px;
+    height: 45px; 
     border-radius: 20px;
     border: 1px solid #dfe1e5;
-    padding: 0 50px 0 20px;
+    padding: 0 25px; 
+    margin: 20px 0;
+    position: relative; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    flex: 1; 
     outline: none;
     font-size: 16px;
+    border: none;
+    background: transparent;
 }
-
-
 
 .search-icons {
-    position: flex;
-    margin-left: -40px;
-    display: inline-flex;
-    justify-content: space-between;
-    width: 60px;
+    position: absolute;
+    right: 10px;
+    display: contents;
+    align-items: center;
 }
-
-
 
 .search-icon,
 .camera-icon,
@@ -77,22 +74,17 @@ body {
 }
 
 
-
-/* Search Icon */
-
 .search-icon {
     background-position: 0 0;
+    color: #9d9fa0;
 }
 
 
-
-/* Microphone Icon */
-
-.mic-icon {
+.mic-icon,
+.camera-icon {
     background-position: -24px 0;
+    color:#9d9fa0 ;
 }
-
-
 
 /* Buttons */
 
@@ -170,7 +162,7 @@ body {
 
 
 
-    .search-icons {
+    .Bar-menu {
 
         margin-left: -50px;
 
@@ -209,9 +201,9 @@ body {
 
 
 
-.search-icon:hover,
+.Bar-menu:hover,
 
-.mic-icon:hover {
+.Bar-menu a, i:hover {
     animation: bounce 1s;
 
 }
