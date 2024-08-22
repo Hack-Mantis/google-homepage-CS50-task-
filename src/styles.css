@@ -1,5 +1,4 @@
 /* General Styles */
-
 body {
     margin: 0;
     padding: 0;
@@ -11,46 +10,63 @@ body {
     background-color: #f8f9fa;
 }
 
-.Bar-menu{
+.Bar-menu {
     position: absolute;
     top: 20px;
     right: 5px;
 }
 
-.Bar-menu a,i {
-    margin-right: 20px; /* Adjust the value as needed to increase or decrease the spacing */
+.Bar-menu a, .Bar-menu i {
+    text-decoration: none;
+    margin-right: 20px; 
+}
+
+.Bar-menu a:hover {
+    color: #c28d2b;
+}
+
+.Bar-menu i:hover {
+    color: rgb(138, 245, 96);
+    background-color: #c3cace;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .google-container {
     text-align: center;
-
 }
-
-
 
 .google-logo img {
     width: 272px;
     height: 92px;
 }
 
-
-
 .search-bar {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 450px;
-    height: 45px; 
+    width: 500px;
+    max-width: 80%;
+    height: 45px;
     border-radius: 20px;
     border: 1px solid #dfe1e5;
-    padding: 0 25px; 
+    padding: 0 25px;
     margin: 20px 0;
-    position: relative; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    
+}
+
+.search-bar:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar input {
-    flex: 1; 
+    flex: 1;
     outline: none;
     font-size: 16px;
     border: none;
@@ -64,35 +80,27 @@ body {
     align-items: center;
 }
 
-.search-icon,
-.camera-icon,
-.mic-icon {
-    background:  no-repeat;
+.search-icon, .camera-icon, .mic-icon {
+    background: no-repeat;
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
-
 
 .search-icon {
     background-position: 0 0;
     color: #9d9fa0;
 }
 
-
-.mic-icon,
-.camera-icon {
+.mic-icon, .camera-icon {
     background-position: -24px 0;
-    color:#9d9fa0 ;
+    color: #9d9fa0;
 }
 
 /* Buttons */
-
 .buttons {
     margin-top: 10px;
 }
-
-
 
 .buttons button {
     background-color: #f8f9fa;
@@ -106,86 +114,101 @@ body {
     transition: all 0.3s ease;
 }
 
-
-
 .buttons button:hover {
     background-color: #e8e8e8;
     border: 1px solid #dfe1e5;
     transform: scale(1.05);
 }
 
+.lan-option {
+    margin-top: 15px;
+    font-size: 14px;
+}
 
+.lan-option a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.lan-option a:hover {
+    color: #5f6368;
+}
+
+.web-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #dbd8d8f6;
+    border-top: 1px solid rgb(212, 231, 231);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.web-footer a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.web-footer a:hover {
+    color: rgb(110, 59, 248);
+}
 
 /* Responsiveness */
-
 @media (max-width: 768px) {
-
     .google-logo img {
-
         width: 200px;
-
         height: 68px;
-
     }
-
-
 
     .search-bar input {
-
-        width: 300px;
-
+        width: 70%;
     }
-
 }
-
-
 
 @media (max-width: 480px) {
-
     .google-logo img {
-
         width: 150px;
-
         height: 51px;
-
     }
-
-
 
     .search-bar input {
-
-        width: 200px;
-
+        width: 70%;
         padding: 0 40px 0 15px;
-
     }
-
-
 
     .Bar-menu {
-
         margin-left: -50px;
-
         width: 50px;
-
     }
-
-
 
     .buttons button {
-
         padding: 8px 15px;
-
     }
-
 }
 
+@media (max-width: 1200px) {
+    .search-bar {
+        width: 600px;
+    }
+}
 
+@media (max-width: 992px) {
+    .search-bar {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 70%; 
+    }
+}
 
 /* Bounce Animation */
-
 @keyframes bounce {
-
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
@@ -193,17 +216,12 @@ body {
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
-
 }
 
-
-
-.Bar-menu:hover,
-
-.Bar-menu a, i:hover {
+.Bar-menu:hover, .Bar-menu a, i:hover {
     animation: bounce 1s;
-
 }
